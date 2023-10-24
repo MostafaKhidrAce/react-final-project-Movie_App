@@ -1,0 +1,26 @@
+.my_card {
+  position: relative;
+  margin: 20px 0 !important;
+}
+.my_card .movie-rate {
+  position: absolute;
+  right: 20px;
+  padding: 8px;
+  color: #fff;
+  background-color: #0d88aa;
+  border-radius: 2px;
+}
+
+.my_card .movie-img {
+  width: 100%;
+  margin: 0;
+}
+.my_card .movie-img img {
+  width: 100%;
+  object-fit: contain;
+}
+.my_card .movie-title {
+  text-align: center;
+  font-weight: 800;
+  margin: 1rem 0;
+}
