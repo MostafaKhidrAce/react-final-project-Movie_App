@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const usePersonSearch = (query) => {
+const usePersonSearch = (query, page) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const BASE_URL = `https://api.themoviedb.org/3/search/person?api_key=14bdd69ce887376edfafb09f23f78fe9&query=${query}`;
+  const BASE_URL = `https://api.themoviedb.org/3/search/person?api_key=14bdd69ce887376edfafb09f23f78fe9&query=${query}&page=${page}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +21,7 @@ const usePersonSearch = (query) => {
     };
 
     fetchData();
-  }, [query]);
+  }, [query, page]);
 
   return { data, loading, error };
 };

@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import useMovieSearch from "../../hooks/useMovieSearch";
 import { useForm, FormProvider } from "react-hook-form";
 import MyCard from "../card/MyCard";
 import Loading from "../Loading.jsx/Loading";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 import "./movies.css";
 
 const MoviesPage = () => {
+  const [page, setPage] = useState(1);
   const { register, handleSubmit } = useForm();
   const [query, setQuery] = useState("movies");
-  const { data, loading, error } = useMovieSearch(query);
+  const { data, loading, error } = useMovieSearch(query, page);
 
   const onSubmit = (formData) => {
     setQuery(formData.query);
@@ -24,6 +27,14 @@ const MoviesPage = () => {
         </div>
       );
     });
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [page]);
 
   return (
     <div className="dd">
@@ -50,6 +61,9 @@ const MoviesPage = () => {
         <Loading loading={loading} error={error}>
           <div className="row">{movieList}</div>
         </Loading>
+        <Stack container="true" spacing={2} alignItems="center">
+          <Pagination count={20} page={page} onChange={handleChange} />
+        </Stack>
       </div>
     </div>
   );

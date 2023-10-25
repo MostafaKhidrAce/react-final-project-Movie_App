@@ -2,16 +2,28 @@ import useTvSearch from "../../hooks/useTvSearch";
 import { useForm, FormProvider } from "react-hook-form";
 import MyCard from "../card/MyCard";
 import Loading from "../Loading.jsx/Loading";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 const TvPage = () => {
+  const [page, setPage] = useState(1);
   const { register, handleSubmit } = useForm();
   const [query, setQuery] = useState("friends");
-  const { data, loading, error } = useTvSearch(query);
+  const { data, loading, error } = useTvSearch(query, page);
 
   const onSubmit = (formData) => {
     setQuery(formData.query);
+    setPage(1);
   };
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [page]);
 
   const tvList = data?.results
     ?.filter((tvShow) => tvShow.poster_path)
@@ -49,6 +61,13 @@ const TvPage = () => {
         <Loading loading={loading} error={error}>
           <div className="row">{tvList}</div>
         </Loading>
+        <Stack container="true" spacing={2} alignItems="center">
+          <Pagination
+            count={data?.total_pages || 1}
+            page={page}
+            onChange={handleChange}
+          />
+        </Stack>
       </div>
     </div>
   );
