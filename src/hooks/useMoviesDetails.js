@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const useMoviesDetails = (url) => {
-  const [data, setData] = useState(null);
+  const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const jsonData = await response.json();
-        setData(jsonData);
+        const response = await axios.get(url);
+        setMovie(response.data);
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -24,7 +21,7 @@ const useMoviesDetails = (url) => {
     fetchData();
   }, [url]);
 
-  return { data, error, loading };
+  return { movie, error, loading };
 };
 
 export default useMoviesDetails;

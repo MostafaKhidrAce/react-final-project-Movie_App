@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
@@ -39,7 +38,6 @@ function DrawerAppBar(props) {
       <Typography className="nav_cross_per" variant="h6" sx={{ my: 2 }}>
         <CloseIcon className="nav_cross" />
       </Typography>
-      {/* <Divider /> */}
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
@@ -78,7 +76,7 @@ function DrawerAppBar(props) {
           >
             <figure className="nav_logo">
               <Link to="/">
-                <img src="logo.svg" alt="" />
+                <img src="/logo.svg" alt="" />
               </Link>
             </figure>
           </Typography>

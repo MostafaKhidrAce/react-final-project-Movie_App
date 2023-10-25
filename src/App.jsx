@@ -3,7 +3,7 @@ import "./App.css";
 import DrawerAppBar from "./components/header/DrawerAppBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home/Home";
-import MoviesDetails from "./components/card-details/MoviesDetails";
+import MoviesDetails from "./components/movie-details/MoviesDetails";
 
 function App() {
   return (

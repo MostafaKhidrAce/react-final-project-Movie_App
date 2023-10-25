@@ -4,11 +4,12 @@
 }
 .my_card .movie-rate {
   position: absolute;
-  right: 20px;
+  right: 0px;
   padding: 8px;
   color: #fff;
   background-color: #0d88aa;
   border-radius: 2px;
+  font-size: 28px;
 }
 
 .my_card .movie-img {
