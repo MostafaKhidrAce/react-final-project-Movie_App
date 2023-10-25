@@ -1,7 +1,7 @@
 import MyCard from "../card/MyCard";
 import useMoveiesTrending from "../../hooks/useMoveiesTrending";
 import "./home.css";
-import Loading from "../Loading.jsx/Loading";
+import Loading from "../Loading/Loading";
 
 const TrendingSection = () => {
   const apiKey = "14bdd69ce887376edfafb09f23f78fe9";

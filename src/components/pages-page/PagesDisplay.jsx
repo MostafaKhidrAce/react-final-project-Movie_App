@@ -1,6 +1,6 @@
 import MyCard from "../card/MyCard";
 import usePagesAllData from "../../hooks/usePagesAllData";
-import Loading from "../Loading.jsx/Loading";
+import Loading from "../Loading/Loading";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useState, useEffect } from "react";

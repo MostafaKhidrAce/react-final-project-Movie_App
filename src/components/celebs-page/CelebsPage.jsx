@@ -1,7 +1,7 @@
 import usePersonSearch from "../../hooks/usePersonSearch";
 import { useForm, FormProvider } from "react-hook-form";
 import CelebCard from "../personCard/CelebCard";
-import Loading from "../Loading.jsx/Loading";
+import Loading from "../Loading/Loading";
 import { useState, useEffect } from "react";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";

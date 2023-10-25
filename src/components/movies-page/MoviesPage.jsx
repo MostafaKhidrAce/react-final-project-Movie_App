@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import useMovieSearch from "../../hooks/useMovieSearch";
 import { useForm, FormProvider } from "react-hook-form";
 import MyCard from "../card/MyCard";
-import Loading from "../Loading.jsx/Loading";
+import Loading from "../Loading/Loading";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import "./movies.css";

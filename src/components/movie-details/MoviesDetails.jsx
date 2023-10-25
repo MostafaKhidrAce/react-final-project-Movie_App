@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useMoviesDetails from "../../hooks/useMoviesDetails";
-import Loading from "../Loading.jsx/Loading";
+import Loading from "../Loading/Loading";
 import "./moviesDetails.css";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";

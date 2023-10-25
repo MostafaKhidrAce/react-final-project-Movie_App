@@ -8,6 +8,7 @@ import MoviesPage from "./components/movies-page/MoviesPage";
 import TvPage from "./components/tv-page/TvPage";
 import CelebsPage from "./components/celebs-page/CelebsPage";
 import Pages from "./components/pages-page/Pages";
+import SeachPage from "./components/search-page/SearchPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/celebs" element={<CelebsPage />} />
         <Route path="/blog" element={<Home />} />
         <Route path="/movie-details/:type/:id" element={<MoviesDetails />} />
+        <Route path="/search/:type/:query" element={<SeachPage />} />
       </Routes>
     </Router>
   );

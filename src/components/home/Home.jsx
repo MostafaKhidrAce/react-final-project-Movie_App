@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
 import SearchIcon from "@mui/icons-material/Search";
 import TrendingSection from "./TrendingSection";
+import { Link } from "react-router-dom";
 import "./home.css";
 const Home = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm();
 
   const onSubmit = (data) => console.log(data);
 
@@ -17,7 +18,12 @@ const Home = () => {
         >
           <div className=" search_home_form">
             <button className="search_home_form_btn">
-              <SearchIcon />
+              <Link
+                className="search_home_form_btn"
+                to={`/search/${watch("type")}/${watch("searchQuery")}`}
+              >
+                <SearchIcon />
+              </Link>
             </button>
             <input
               className="search_home_form_input"
@@ -25,7 +31,7 @@ const Home = () => {
               autoComplete="off"
               spellCheck="false"
               placeholder="Find movies tv shows documentary and more..."
-              {...register("searchQuarry")}
+              {...register("searchQuery")}
             />
           </div>
           <div className="selector">
@@ -34,11 +40,11 @@ const Home = () => {
               <span></span>
               <span></span>
             </div>
-            <select defaultValue="all" {...register("mediaType")}>
-              <option disabled hidden value="all">
+            <select defaultValue="multi" {...register("type")}>
+              <option disabled hidden value="multi">
                 Media Type
               </option>
-              <option value="all">All</option>
+              <option value="multi">All</option>
               <option value="movie">Movies</option>
               <option value="tv-show">Tv Shows</option>
               <option value="person">Person</option>

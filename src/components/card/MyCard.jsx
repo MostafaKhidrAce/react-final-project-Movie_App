@@ -4,7 +4,7 @@ const MyCard = ({ movie }) => {
   return (
     <>
       <div className="my_card">
-        <span className="movie-rate">{movie.vote_average.toFixed(1)}</span>
+        <span className="movie-rate">{movie?.vote_average?.toFixed(1)}</span>
         <figure className="movie-img">
           <Link to={`/movie-details/${movie.media_type}/${movie.id}`}>
             <img
