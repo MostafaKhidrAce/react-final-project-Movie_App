@@ -7,6 +7,7 @@ import MoviesDetails from "./components/movie-details/MoviesDetails";
 import MoviesPage from "./components/movies-page/MoviesPage";
 import TvPage from "./components/tv-page/TvPage";
 import CelebsPage from "./components/celebs-page/CelebsPage";
+import Pages from "./components/pages-page/Pages";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <DrawerAppBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page" element={<Home />} />
+        <Route path="/page" element={<Pages />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/tv-shows" element={<TvPage />} />
         <Route path="/celebs" element={<CelebsPage />} />

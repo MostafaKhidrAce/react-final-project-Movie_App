@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import SearchIcon from "@mui/icons-material/Search";
-import TrendingSection from "./TrendingSection";
-import "./home.css";
-const Home = () => {
-  const { register, handleSubmit } = useForm();
+import PagesDisplay from "./PagesDisplay";
 
-  const onSubmit = (data) => console.log(data);
+const Pages = () => {
+  const { register, handleSubmit } = useForm();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const onSubmit = (data) => {
+    setSearchQuery(data.searchQuarry);
+  };
 
   return (
     <>
@@ -13,10 +17,10 @@ const Home = () => {
         <form
           onSubmit={handleSubmit(onSubmit)}
           noValidate
-          className="container "
+          className="container"
         >
-          <div className=" search_home_form">
-            <button className="search_home_form_btn">
+          <div className="search_home_form">
+            <button type="submit" className="search_home_form_btn">
               <SearchIcon />
             </button>
             <input
@@ -46,9 +50,9 @@ const Home = () => {
           </div>
         </form>
       </section>
-      <TrendingSection />
+      <PagesDisplay />
     </>
   );
 };
 
-export default Home;
+export default Pages;
