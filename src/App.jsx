@@ -9,6 +9,8 @@ import TvPage from "./components/tv-page/TvPage";
 import CelebsPage from "./components/celebs-page/CelebsPage";
 import Pages from "./components/pages-page/Pages";
 import SeachPage from "./components/search-page/SearchPage";
+import NotFound from "./components/not-found/NotFound";
+import Blog from "./components/blog/Blog";
 
 function App() {
   return (
@@ -20,9 +22,10 @@ function App() {
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/tv-shows" element={<TvPage />} />
         <Route path="/celebs" element={<CelebsPage />} />
-        <Route path="/blog" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/movie-details/:type/:id" element={<MoviesDetails />} />
         <Route path="/search/:type/:query" element={<SeachPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

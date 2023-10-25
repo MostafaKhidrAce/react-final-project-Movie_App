@@ -40,7 +40,7 @@ const CelebsPage = () => {
               autoComplete="off"
               spellCheck="false"
               {...register("query")}
-              placeholder="Search for movies..."
+              placeholder="Search for celebrities..."
             />
             <button className="search-button" type="submit">
               Search

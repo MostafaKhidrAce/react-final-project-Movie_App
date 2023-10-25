@@ -51,7 +51,7 @@ const TvPage = () => {
               autoComplete="off"
               spellCheck="false"
               {...register("query")}
-              placeholder="Search for movies..."
+              placeholder="Search for tv shows..."
             />
             <button className="search-button" type="submit">
               Search
