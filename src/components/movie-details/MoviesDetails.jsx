@@ -10,7 +10,7 @@ const MoviesDetails = () => {
   const apiKey = "14bdd69ce887376edfafb09f23f78fe9";
   const apiUrl = `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}`;
   const { movie, error, loading } = useMoviesDetails(apiUrl);
-  console.log(movie?.homepage);
+
   return (
     <div className="Movies_details">
       <Loading loading={loading} error={error}>

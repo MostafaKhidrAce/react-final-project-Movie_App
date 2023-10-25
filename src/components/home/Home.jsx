@@ -6,16 +6,10 @@ import "./home.css";
 const Home = () => {
   const { register, handleSubmit, watch } = useForm();
 
-  const onSubmit = (data) => console.log(data);
-
   return (
     <>
       <section className="search_home">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-          className="container "
-        >
+        <form noValidate className="container ">
           <div className=" search_home_form">
             <button className="search_home_form_btn">
               <Link
