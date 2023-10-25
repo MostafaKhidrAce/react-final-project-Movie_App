@@ -9,9 +9,15 @@ const CelebsPage = ({ data }) => {
       />
       <div>
         <h2>{data?.name || data?.original_name}</h2>
-        <h4>{data?.known_for[0]?.title}</h4>
+        <h4 className="per_title">{data?.known_for[0]?.title}</h4>
         <p className="per_overview ">{data?.known_for[0]?.overview}</p>
-        <p>Release Date: {data?.known_for[0]?.release_date}</p>
+        <p>
+          {data?.known_for[0]?.release_date ? (
+            <>Release Date: {data?.known_for[0]?.release_date}</>
+          ) : (
+            "Release Date: N/A"
+          )}
+        </p>
       </div>
     </>
   );

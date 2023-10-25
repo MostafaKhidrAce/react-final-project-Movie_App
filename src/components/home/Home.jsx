@@ -40,7 +40,7 @@ const Home = () => {
               </option>
               <option value="multi">All</option>
               <option value="movie">Movies</option>
-              <option value="tv-show">Tv Shows</option>
+              <option value="tv">Tv Shows</option>
               <option value="person">Person</option>
             </select>
           </div>

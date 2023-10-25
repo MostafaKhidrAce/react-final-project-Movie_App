@@ -11,7 +11,7 @@ const Pages = () => {
       <section className="search_home">
         <form noValidate className="container">
           <div className="search_home_form">
-            <button type="submit" className="search_home_form_btn">
+            <button type="text" className="search_home_form_btn">
               <Link
                 className="search_home_form_btn"
                 to={`/search/${watch("type")}/${watch("searchQuery")}`}
@@ -40,7 +40,7 @@ const Pages = () => {
               </option>
               <option value="multi">All</option>
               <option value="movie">Movies</option>
-              <option value="tv-show">Tv Shows</option>
+              <option value="tv">Tv Shows</option>
               <option value="person">Person</option>
             </select>
           </div>

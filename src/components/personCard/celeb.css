@@ -7,3 +7,8 @@
   font-size: 0.7rem;
   height: 50.38px;
 }
+.per_title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
