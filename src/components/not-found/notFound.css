@@ -9,11 +9,6 @@
 .p-0 {
   padding: 0 !important;
 }
-section {
-  padding: 120px 0;
-  overflow: hidden;
-  background: #fff;
-}
 
 .error-page {
   background-color: #bababa4a;
