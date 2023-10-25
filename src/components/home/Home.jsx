@@ -24,6 +24,7 @@ const Home = () => {
               className="search_home_form_input"
               type="text"
               autoComplete="off"
+              spellCheck="false"
               placeholder="Find movies tv shows documentary and more..."
               {...register("searchQuarry")}
             />

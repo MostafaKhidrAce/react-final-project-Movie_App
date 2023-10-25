@@ -1,0 +1,9 @@
+.per_overview {
+  color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.7rem;
+  height: 50.38px;
+}
